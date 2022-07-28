@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/sakura.css/css/sakura.css" media="screen" />
+  <link rel="stylesheet" href="https://unpkg.com/sakura.css/css/sakura-dark.css"
+    media="screen and (prefers-color-scheme: dark)" />
+
+  <link rel="stylesheet" href="https://unpkg.com/@speed-highlight/core/dist/themes/github-light.css" media="screen">
+  <link rel="stylesheet" href="https://unpkg.com/@speed-highlight/core/dist/themes/github-dark.css"
+    media="screen and (prefers-color-scheme: dark)">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400&display=swap');
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    pre {
+      background-color: transparent;
+      padding: 0;
+    }
+
+    code {
+      padding: 1.5rem !important;
+      border-radius: 1rem !important;
+      width: 100%;
+      font: 18px 'Fira Code', monospace !important;
+    }
+
+    img {
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    {{content}}
+  </div>
+  <script type="module">
+    import { highlightAll } from 'https://unpkg.com/@speed-highlight/core@1.1.7/dist/index.js';
+    highlightAll({
+      hideLineNumbers: false
+    });
+  </script>
+</body>
+
+</html>
