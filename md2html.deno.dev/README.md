@@ -2,9 +2,7 @@
 
 https://md2html.deno.dev
 
-Use https://deno.land/x/markdown@v2.0.0 and https://highlightjs.org
-
-Source in https://github.com/KusStar/deno-serverless-functions
+[![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/KusStar/deno-serverless-functions/tree/main/md2html.deno.dev)
 
 ## Usage
 
