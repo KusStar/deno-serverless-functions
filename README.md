@@ -2,6 +2,8 @@
 
 <https://fns.deno.dev>
 
+Source in <https://github.com/KusStar/deno-serverless-functions>
+
 ## Functions
 
 - [**gqr.deno.dev**](./gqr.deno.dev) - <https://gqr.deno.dev/>
