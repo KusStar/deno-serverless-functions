@@ -1,5 +1,7 @@
 # Deno Deploy Functions
 
+<https://fns.deno.dev>
+
 ## Functions
 
 - [**gqr.deno.dev**](./gqr.deno.dev) - <https://gqr.deno.dev/>
