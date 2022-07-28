@@ -1,15 +1,19 @@
 import { serve } from "https://deno.land/std@0.149.0/http/server.ts";
-import * as path from "https://deno.land/std@0.149.0/path/mod.ts";
+import { path, rootDir } from '../utils.ts';
 
-const __dirname = new URL('.', import.meta.url).pathname;
+export const README = path.join(rootDir, "./github-api-proxy.deno.dev/README.md")
 
-const README = path.join(__dirname, "README.md")
+const MD_TO_HTML_API = Deno.env.get("DEV") ? 'http://localhost:3000' : 'https://md2html.deno.dev'
 
 async function handleRequest(request: Request) {
   const { pathname } = new URL(request.url);
-
   if (pathname === "/") {
-    return new Response(await Deno.readFile(README));
+    const md = await Deno.readTextFile(README)
+    const res = await fetch(MD_TO_HTML_API, {
+      method: 'POST',
+      body: md
+    })
+    return res;
   }
 
   const url = new URL(pathname.slice(1), "https://api.github.com").toString()
