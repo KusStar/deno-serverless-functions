@@ -16,7 +16,7 @@ async function handleRequest(request: Request) {
     return res;
   }
 
-  const url = new URL(pathname.slice(1), "https://api.github.com").toString()
+  const url = new URL(pathname.slice(2), "https://api.github.com").toString()
   const res = await fetch(url, {
     headers: request.headers
   })
