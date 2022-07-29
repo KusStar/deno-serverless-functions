@@ -13,6 +13,9 @@ export const toHTML = (md: string) => {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+      body {
+        background-color: var(--color-canvas-default);
+      }
       main {
         max-width: 800px;
         margin: 0 auto;
@@ -20,9 +23,9 @@ export const toHTML = (md: string) => {
       ${CSS}
     </style>
   </head>
-  <body>
-    <main data-color-mode="light" data-light-theme="light" data-dark-theme="dark" class="markdown-body">
-      ${body}
+  <body data-color-mode="auto" data-light-theme="light" data-dark-theme="dark" class="markdown-body">
+    <main>
+    ${body}
     </main>
   </body>
 </html>
