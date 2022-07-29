@@ -5,6 +5,7 @@ import "https://esm.sh/prismjs@1.27.0/components/prism-diff?no-check";
 import "https://esm.sh/prismjs@1.27.0/components/prism-bash?no-check";
 
 export const toHTML = (md: string) => {
+  const title = md.match(/# (.+)\n?/g)?.[0].slice(2) || ''
   const body = render(md)
   const html = `
 <!DOCTYPE html>
@@ -12,6 +13,7 @@ export const toHTML = (md: string) => {
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${title}</title>
     <style>
       body {
         background-color: var(--color-canvas-default);
