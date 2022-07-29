@@ -1,4 +1,4 @@
-import { CSS, render } from "https://deno.land/x/gfm/mod.ts";
+import { CSS, render } from "https://deno.land/x/gfm@0.1.22/mod.ts";
 
 import "https://esm.sh/prismjs@1.27.0/components/prism-typescript?no-check";
 import "https://esm.sh/prismjs@1.27.0/components/prism-diff?no-check";
