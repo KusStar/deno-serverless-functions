@@ -16,7 +16,8 @@ async function handleRequest(request: Request) {
 
   const res = await fetch(url, {
     method: request.method,
-    headers: request.headers
+    headers: request.headers,
+    body: request.body
   })
 
   return res;
