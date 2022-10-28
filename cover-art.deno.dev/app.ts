@@ -10,6 +10,8 @@ const getCoverUrl = (source: string) => {
   return null
 }
 
+const cache = new Map<string, string>()
+
 async function handleRequest(request: Request) {
   const url = new URL(request.url);
 
@@ -21,7 +23,11 @@ async function handleRequest(request: Request) {
     return new Response(null)
   }
   const target = decodeURIComponent(url.pathname).slice(1)
+  if (cache.has(target)) {
+    return new Response(cache.get(target))
+  }
   const coverUrl = await getCoverUrl(target)
+  cache.set(target, coverUrl)
   return new Response(coverUrl)
 }
 
