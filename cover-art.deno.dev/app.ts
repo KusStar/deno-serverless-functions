@@ -22,13 +22,19 @@ async function handleRequest(request: Request) {
   if (url.pathname === '/favicon.ico') {
     return new Response(null)
   }
-  const target = decodeURIComponent(url.pathname).slice(1)
+  let target = decodeURIComponent(url.pathname).slice(1)
+  if (target.endsWith('/')) {
+    target = target.slice(0, -1)
+  }
   if (cache.has(target)) {
     return new Response(cache.get(target))
   }
   const coverUrl = await getCoverUrl(target)
-  cache.set(target, coverUrl)
-  return new Response(coverUrl)
+  if (coverUrl) {
+    cache.set(target, coverUrl)
+    return new Response(coverUrl)
+  }
+  return new Response(null)
 }
 
 serve(handleRequest, {
