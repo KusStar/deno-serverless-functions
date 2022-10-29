@@ -1,11 +1,14 @@
 import { serve } from "https://deno.land/std@0.142.0/http/server.ts";
 import { fetchReadmeToHtml } from '../utils.ts';
 import { parseBilibili } from './parsers/bilibili.ts'
+import { parse163music } from './parsers/163music.ts';
 
 const getCoverUrl = (source: string) => {
   const url = new URL(source)
   if (url.host.includes('bilibili.com') || url.host.includes('b23.tv')) {
     return parseBilibili(source)
+  } else if (url.host.includes('music.163.com')) {
+    return parse163music(source)
   }
   return null
 }
