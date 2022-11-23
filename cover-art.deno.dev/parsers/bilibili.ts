@@ -7,7 +7,11 @@ export const parseBilibili = async (source: string) => {
   const groups = RE.exec(text)?.groups
 
   if (groups) {
-    return groups.coverArt.replace('http://', 'https://')
+    const url = groups.coverArt.replace('http://', 'https://')
+    if (url.includes("https://")) {
+      return url
+    }
+    return 'https:' + url
   }
 
   return null
