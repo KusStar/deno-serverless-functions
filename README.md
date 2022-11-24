@@ -17,3 +17,7 @@
 - [**md2html.deno.dev**](https://github.com/KusStar/deno-serverless-functions/tree/main/md2html.deno.dev) - <https://md2html.deno.dev/>
 
   Markdown to HTML API
+
+- [**cover-art.deno.dev**](https://github.com/KusStar/deno-serverless-functions/tree/main/cover-art.deno.dev) - <https://cover-art.deno.dev/>
+
+Get Site Cover Art
