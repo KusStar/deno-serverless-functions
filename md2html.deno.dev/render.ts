@@ -17,6 +17,7 @@ export const toHTML = (md: string) => {
     <style>
       body {
         background-color: var(--color-canvas-default);
+        padding: 1rem;
       }
       main {
         max-width: 800px;
