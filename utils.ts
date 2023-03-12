@@ -18,3 +18,17 @@ export const fetchReadmeToHtml = async (metaUrl: string) => {
 
   return res
 }
+
+export const proxyFetch = async (request: Request, url: URL, host: string) => {
+  url.hostname = host
+  url.port = ""
+  url.protocol = "https:"
+
+  const res = await fetch(url.href, {
+    method: request.method,
+    headers: request.headers,
+    body: request.body
+  })
+
+  return res;
+}
