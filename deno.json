@@ -1,10 +1,10 @@
 {
   "tasks": {
-    "dev:root": "deno run --allow-all --watch ./app.ts",
-    "dev:gqr": "deno run --allow-all --watch ./gqr.deno.dev/app.ts",
-    "dev:ghp": "deno run --allow-all --watch ./github-api-proxy.deno.dev/app.ts",
-    "dev:md2html": "PORT=3000 deno run --allow-all --watch ./md2html.deno.dev/app.ts",
-    "dev:cover-art": "deno run --allow-all --watch ./cover-art.deno.dev/app.ts",
-    "dev:aiopen": "deno run --allow-all --watch ./aiopen.deno.dev/app.ts"
+    "root": "deno run --allow-all --watch ./app.ts",
+    "gqr": "deno run --allow-all --watch ./gqr.deno.dev/app.ts",
+    "ghp": "deno run --allow-all --watch ./github-api-proxy.deno.dev/app.ts",
+    "md2html": "PORT=3000 deno run --allow-all --watch ./md2html.deno.dev/app.ts",
+    "cover-art": "deno run --allow-all --watch ./cover-art.deno.dev/app.ts",
+    "aiopen": "deno run --allow-all --watch ./aiopen.deno.dev/app.ts"
   }
 }

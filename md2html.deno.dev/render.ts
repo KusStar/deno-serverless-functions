@@ -1,8 +1,8 @@
-import { CSS, render } from "https://deno.land/x/gfm@0.1.22/mod.ts";
+import { CSS, render } from "https://deno.land/x/gfm@0.2.1/mod.ts";
 
-import "https://esm.sh/prismjs@1.27.0/components/prism-typescript?no-check";
-import "https://esm.sh/prismjs@1.27.0/components/prism-diff?no-check";
-import "https://esm.sh/prismjs@1.27.0/components/prism-bash?no-check";
+import "https://esm.sh/prismjs@1.29.0/components/prism-typescript?no-check";
+import "https://esm.sh/prismjs@1.29.0/components/prism-diff?no-check";
+import "https://esm.sh/prismjs@1.29.0/components/prism-bash?no-check";
 
 export const toHTML = (md: string) => {
   const title = md.match(/# (.+)\n?/g)?.[0].slice(2) || ''

@@ -1,4 +1,4 @@
-import { serve } from "https://deno.land/std@0.142.0/http/server.ts";
+import { serve } from "https://deno.land/std@0.179.0/http/server.ts";
 import { path, dirname } from '../utils.ts';
 import { toHTML } from './render.ts';
 
