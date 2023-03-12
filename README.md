@@ -20,4 +20,8 @@
 
 - [**cover-art.deno.dev**](https://github.com/KusStar/deno-serverless-functions/tree/main/cover-art.deno.dev) - <https://cover-art.deno.dev/>
 
-Get Site Cover Art
+  Get Site Cover Art
+
+- [**aiopen.deno.dev**](https://github.com/KusStar/deno-serverless-functions/tree/main/aiopen.deno.dev) - <https://aiopen.deno.dev/>
+
+  OpenAI API Proxy
