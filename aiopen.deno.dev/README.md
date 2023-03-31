@@ -7,7 +7,7 @@
 ## Usage
 
 ```js
-const completion = await fetch('http://aiopen.deno.dev/v1/chat/completions', {
+const completion = await fetch('https://aiopen.deno.dev/v1/chat/completions', {
   headers: {
     'Content-Type': 'application/json',
     Authorization: `Bearer ${OPENAI_API_KEY}`,
